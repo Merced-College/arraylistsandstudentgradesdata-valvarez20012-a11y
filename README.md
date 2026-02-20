@@ -2,4 +2,6 @@
 # arrayListsAndStudentGradesData
 
 This is your README.md file where you can write your reflection response for this programming project.
-
+//First we pulled up the lecture and watched throught the first half of the video to get started on the project. Our first problem we enchountered was weather or not we should have set it to private or public class because the video the proffessor says to set to private but in the text she keeps it public. We kept it public as for us it made sense that we were gonna need to keep it public at the beginning to the end. We did not need to change anything afterwards and the problem was fixed.
+//or
+//During the lab, one problem we ran into was getting compile errors in our Course class. At one point, the compiler said it could not find the variable courseName, even though we thought we had declared it correctly. After carefully check our code, we realized that Java is case senstive and even small mistakes like capitaliztion or spacing in method names can cause errors. We also ran into an issue where a missing semicolon caused the compiler to point to the wrong line, which made debugging confusing at first. We fixed these problems by slowing down, carefully comparing our variable names, and re-reading the error messages instead of guesssing. This helped us understand how percise Java syntax must be and improved our debugging skills. 

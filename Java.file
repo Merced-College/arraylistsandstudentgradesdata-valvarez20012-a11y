@@ -1,0 +1,57 @@
+/*
+ * Name: John Chiero, Nanak Barring, Victor Alvarez
+ * Date: 02/19/2026
+ * Program: Course Grades Analyzer - reads CSV grade totals and analyzes A percentages.
+ */
+import java.util.ArrayList;
+
+public class Course {
+    private String courseName; 
+    // index 0 = A, 1 = B, 2 = C, 3 = D, 4 = F
+    private ArrayList<Integer> courseGrades;
+
+    public Course(String courseName, ArrayList<Integer> courseGrades) {
+        this.courseName = courseName;
+        this.courseGrades = courseGrades;
+    }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    public void setCourseName(String courseName) {
+        this.courseName = courseName; 
+    }
+
+    public ArrayList<Integer> getCourseGrades() {
+        return courseGrades;
+    }
+
+    public void setCourseGrades(ArrayList<Integer> courseGrades) {
+        this.courseGrades = courseGrades;
+    }
+    
+    public int getTotalGrades() {
+        int total = 0;
+        for (int grade : courseGrades) {
+            total += grade;
+        }
+        return total; 
+    }
+    
+    public double getAPercent() {
+        int total = getTotalGrades();
+        if (total == 0) {
+            return 0.0;
+        }
+        int aCount = 0;
+        if (courseGrades != null && courseGrades.size() > 0) {
+            aCount = courseGrades.get(0);
+        }
+        return ((double) aCount / total) * 100.0;
+    }
+    @Override 
+    public String toString() {
+        return courseName + " " + courseGrades.toString();
+    }
+}
